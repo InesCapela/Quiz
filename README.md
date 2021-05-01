@@ -1,1 +1,3 @@
-<h3 align="center"> GO + GIN + JWT + Swagger + Hot reload (on Linux)</h3>
+Project_2021_PSRS
+
+docker-compose up --buid
