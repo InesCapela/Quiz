@@ -3,7 +3,7 @@ package services
 import (
 	"net/http"
 
-	"api/model"
+	"Project_2021_PSRS/model"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"

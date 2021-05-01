@@ -23,7 +23,7 @@ services:
     depends_on:
       - database
     volumes:
-      - .:/go/src/api
+      - .:/go/src/Project_2021_PSRS
 
 volumes:
   database-data: # named volumes can be managed easier using docker-compose

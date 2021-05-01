@@ -20,7 +20,7 @@ RUN go get -u github.com/stretchr/testify
 RUN go get -u github.com/githubnemo/CompileDaemon
 
 # Set the Current Working Directory inside the container
-WORKDIR /go/src/api
+WORKDIR /go/src/Project_2021_PSRS
 
 # Copy everything from the current directory to the Working Directory inside the container
 COPY . .

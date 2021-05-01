@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"api/model"
+	"Project_2021_PSRS/model"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"

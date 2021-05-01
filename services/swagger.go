@@ -1,6 +1,6 @@
 package services
 
-import "api/docs"
+import "Project_2021_PSRS/docs"
 
 func FormatSwagger() {
 	//http://localhost:8081/swagger/index.html

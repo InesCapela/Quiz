@@ -3,9 +3,9 @@ package main
 import (
 	"net/http"
 
-	"api/model"
-	"api/routes"
-	"api/services"
+	"Project_2021_PSRS/model"
+	"Project_2021_PSRS/routes"
+	"Project_2021_PSRS/services"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

@@ -3,8 +3,8 @@ package controllers
 import (
 	"net/http"
 
-	"api/model"
-	"api/services"
+	"Project_2021_PSRS/model"
+	"Project_2021_PSRS/services"
 
 	"github.com/gin-gonic/gin"
 )
