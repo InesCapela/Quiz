@@ -48,7 +48,7 @@ func main() {
 
 	// Routes WITH auth
 	routesWithAuth := router.Group("/api/v1/")
-	routesWithAuth.Use(services.AuthorizationRequired())
+	routesWithAuth.Use(services.UserAuthorizationRequired())
 	{
 		// TODO: Put your routes here!
 	}
@@ -57,7 +57,7 @@ func main() {
 	{
 		auth.POST("/login", routes.GenerateToken)
 		auth.POST("/register", routes.RegisterUser)
-		auth.PUT("/refresh_token", services.AuthorizationRequired(), routes.RefreshToken)
+		auth.PUT("/refresh_token", services.AdminAuthorizationRequired(), routes.RefreshToken)
 	}
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
