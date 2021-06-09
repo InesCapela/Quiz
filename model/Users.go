@@ -1,10 +1,17 @@
 package model
 
-import "github.com/jinzhu/gorm"
+import (
+	"time"
+)
 
 type Users struct {
-	gorm.Model `swaggerignore:"true"`
-	Username   string `json:"username"`
-	Password   string `json:"password"`
+	ID        uint       `gorm:"primary_key"`
+	CreatedAt time.Time  `json:"-"`
+	UpdatedAt time.Time  `json:"-"`
+	DeletedAt *time.Time `json:"-" sql:"index"`
+
+	Username   string `json:"username" binding:"required"`
+	Password   string `json:"password" binding:"required"`
 	IsAdmin  bool   `json:"isAdmin" gorm:"default:false"`
+
 }
