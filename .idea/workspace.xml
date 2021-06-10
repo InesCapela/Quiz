@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa30929-5cd4-4fdc-91d6-33d4efd35229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/users.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Game.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/users.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/question.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Options.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/question.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Users.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Users.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Game.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Game.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Question.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Question.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/jwt.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

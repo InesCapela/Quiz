@@ -10,8 +10,9 @@ import (
 // GetAllUsers /**
 func GetAllUsers(c *gin.Context) {
 	var users []model.Users
+	username := c.Param("username")
 
-	services.Db.Find(&users)
+	services.Db.Find(&users, username)
 
 	if len(users) <= 0 {
 		c.JSON(http.StatusNotFound, gin.H{"status": http.StatusNotFound, "message": "None found!"})

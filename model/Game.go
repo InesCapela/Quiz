@@ -8,6 +8,6 @@ type Game struct {
 	UpdatedAt time.Time  `json:"-"`
 	DeletedAt *time.Time `json:"-" sql:"index"`
 
-	Question  []*Question ` gorm:"many2many:game_questions;" json:"options" binding:"required"`
-	score   string   `json:"score" binding:"required"`
+	Question  []*Question ` gorm:"many2many:game_questions;" json:"questions" binding:"required"`
+	Score   string   `json:"score" binding:"required"`
 }

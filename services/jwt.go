@@ -30,6 +30,7 @@ func GenerateTokenJWT(credentials model.Users) string {
 
 	// Create the JWT claims, which includes the username and expiry time
 	claims := &model.Claims{
+		IsAdmin: credentials.IsAdmin,
 		Username: credentials.Username,
 		StandardClaims: jwt.StandardClaims{
 			// In JWT, the expiry time is expressed as unix milliseconds
