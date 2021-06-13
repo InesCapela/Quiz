@@ -53,6 +53,8 @@ func questionsRoutes(router *gin.Engine) {
 		back.DELETE("/:id",  services.AdminAuthorizationRequired(), routes.DeleteGame)
 		back.GET("/", services.AdminAuthorizationRequired(), routes.GetAllGames)
 		back.GET("/:id", services.UserAuthorizationRequired(), routes.GetUserFromGame)
+		back.POST("/join/:id", services.UserAuthorizationRequired(), routes.AddPlayerGame)
+		back.POST("/play/:id", services.UserAuthorizationRequired(), routes.CheckAnswer)
 	}
 
 	back = router.Group("/question")

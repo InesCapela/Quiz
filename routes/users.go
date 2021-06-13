@@ -23,6 +23,13 @@ func GetUserFromGame(c *gin.Context) {
 	controllers.GetUserFromGame(c)
 }
 
+func AddPlayerGame(c *gin.Context) {
+	controllers.AddPlayerGame(c)
+}
+func CheckAnswer(c *gin.Context) {
+	controllers.CheckAnswer(c)
+}
+
 
 
 

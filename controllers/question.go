@@ -3,7 +3,6 @@ package controllers
 import (
 	"Project_2021_PSRS/model"
 	"Project_2021_PSRS/services"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -16,12 +15,11 @@ func GetAllQuestions(c *gin.Context) {
 	services.Db.Select([]string{"question","id"}).Find(&questions)
 	defer services.Db.Close()
 
-	for i := range questions {
+	for i, question := range questions {
 		var options []model.Options
+		services.Db.Where("question_id = ?", question.ID).Find(&options)
 		//services.Db.Select([]string{"question_id","option"}).Find(&options)
-		services.Db.Select("option").Find(&options)
 		questions[i].Options = options
-		fmt.Println(options)
 	}
 
 	c.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "data": questions})

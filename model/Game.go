@@ -8,7 +8,7 @@ type Game struct {
 	UpdatedAt time.Time  `json:"-"`
 	DeletedAt *time.Time `json:"-" sql:"index"`
 
-	Question  []Question ` gorm:"many2many:game_questions" json:"questions"`
-	Score   uint   `json:"score"`
-	Player []Users ` gorm:"many2many" json:"player"`
+	Question  []Question ` gorm:"many2many:game_questions" json:"questions,omitempty"`
+	Score   uint   `json:"score,omitempty"`
+	Players []Users ` gorm:"many2many" json:"players,omitempty"`
 }

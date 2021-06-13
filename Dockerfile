@@ -16,6 +16,9 @@ RUN go get -u github.com/rs/cors/wrapper/gin
 RUN go get -u github.com/dgrijalva/jwt-go
 RUN go get -u github.com/stretchr/testify
 RUN go get -u github.com/stretchr/testify/assert
+RUN go get -u github.com/gorilla/mux
+RUN go get -u net/http/httptest
+RUN go get -u net/http
 
 # HOT RELOAD
 RUN go get -u github.com/githubnemo/CompileDaemon
