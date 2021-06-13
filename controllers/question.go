@@ -13,14 +13,14 @@ func GetAllQuestions(c *gin.Context) {
 	var questions []model.Question
 
 	services.OpenDatabase()
-	services.Db.Find(&questions)
+	services.Db.Select([]string{"question","id"}).Find(&questions)
 	defer services.Db.Close()
 
-
-	for _, question := range questions {
+	for i := range questions {
 		var options []model.Options
-		services.Db.Model(&question).Association("Options").Find(&options)
-		question.Options = options
+		//services.Db.Select([]string{"question_id","option"}).Find(&options)
+		services.Db.Select("option").Find(&options)
+		questions[i].Options = options
 		fmt.Println(options)
 	}
 

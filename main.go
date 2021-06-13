@@ -15,6 +15,8 @@ func init() {
 	services.OpenDatabase()
 	//services.Db.DropTableIfExists(&model.Users{})
 	//services.Db.DropTableIfExists(&model.Question{})
+	//services.Db.DropTableIfExists(&model.Options{})
+	//services.Db.DropTableIfExists(&model.Game{})
 
 	services.Db.AutoMigrate(&model.Users{})
 	services.Db.AutoMigrate(&model.Question{})
@@ -25,32 +27,40 @@ func init() {
 }
 
 func authRoutes(router *gin.Engine) {
+
 	auth := router.Group("/auth")
 	{
 		auth.POST("/login", routes.GenerateToken)
-		auth.POST("/register", services.AdminAuthorizationRequired(), routes.RegisterUser)
+		auth.POST("/register", routes.RegisterUser)
 		auth.PUT("/refresh_token", services.AdminAuthorizationRequired(), routes.RefreshToken)
 	}
 }
 
 func questionsRoutes(router *gin.Engine) {
 
-	back := router.Group("/admin")
-	back.Use(services.AdminAuthorizationRequired())
+	back := router.Group("/user")
 	{
-		back.GET("/users/:id", routes.GetUserByID)
-		back.DELETE("/users/:id", routes.DeleteUser)
-		back.POST("/question", routes.CreateQuestion)
-		back.PUT("/question/:id", routes.UpdateQuestion)
-		back.DELETE("/question/:id", routes.DeleteQuestion)
+		back.PUT("/:id", services.UserAuthorizationRequired(), routes.UpdateUser)
+		back.GET("/", services.UserAuthorizationRequired(), routes.GetAllUsers)
+		back.GET("/:id", services.AdminAuthorizationRequired(), routes.GetUserByID)
+		back.DELETE("/:id", services.AdminAuthorizationRequired(), routes.DeleteUser)
 	}
 
-	back = router.Group("/user")
-	back.Use(services.UserAuthorizationRequired())
+	back = router.Group("/game")
 	{
-		back.PUT("/users/:id", routes.UpdateUser)
-		back.GET("/question", routes.GetAllQuestions)
-		back.GET("/users", routes.GetAllUsers)
+		back.POST("/", services.AdminAuthorizationRequired(), routes.CreateGame)
+		back.PUT("/:id",  services.AdminAuthorizationRequired(), routes.UpdateGame)
+		back.DELETE("/:id",  services.AdminAuthorizationRequired(), routes.DeleteGame)
+		back.GET("/", services.AdminAuthorizationRequired(), routes.GetAllGames)
+		back.GET("/:id", services.UserAuthorizationRequired(), routes.GetUserFromGame)
+	}
+
+	back = router.Group("/question")
+	{
+		back.POST("/", services.AdminAuthorizationRequired(), routes.CreateQuestion)
+		back.PUT("/:id",  services.AdminAuthorizationRequired(), routes.UpdateQuestion)
+		back.DELETE("/:id",  services.AdminAuthorizationRequired(), routes.DeleteQuestion)
+		back.GET("/", services.AdminAuthorizationRequired(), routes.GetAllQuestions)
 	}
 
 }

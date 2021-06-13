@@ -18,3 +18,11 @@ func DeleteUser(c *gin.Context) {
 func UpdateUser(c *gin.Context) {
 	controllers.UpdateUser(c)
 }
+
+func GetUserFromGame(c *gin.Context) {
+	controllers.GetUserFromGame(c)
+}
+
+
+
+

@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa30929-5cd4-4fdc-91d6-33d4efd35229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/question.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Options.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/question.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/game.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/player_game.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/game.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/authentication_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/question.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/question.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Game.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Game.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Options.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Options.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Question.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Question.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Users.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/Users.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/jwt.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +53,24 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TestLoginHE in Project_2021_PSRS/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Project_2021_PSRS" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <kind value="PACKAGE" />
+      <package value="Project_2021_PSRS/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestLoginHE\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestLoginHE in Project_2021_PSRS/tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

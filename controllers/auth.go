@@ -41,7 +41,10 @@ func RegisterHandler(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"})
 		return
 	}
+
 	services.OpenDatabase()
+	creds.IsAdmin= false
+
 	services.Db.Save(&creds)
 
 	defer services.Db.Close()

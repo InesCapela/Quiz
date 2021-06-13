@@ -11,7 +11,7 @@ type Users struct {
 	DeletedAt *time.Time `json:"-" sql:"index"`
 
 	Username   string `json:"username" binding:"required"`
-	Password   string `json:"password" binding:"required"`
-	IsAdmin  bool   `json:"isAdmin" gorm:"default:false"`
+	Password   string `json:"password,omitempty" binding:"required"`
+	IsAdmin  bool   `json:"isAdmin,omitempty" gorm:"default:false"`
 
 }
